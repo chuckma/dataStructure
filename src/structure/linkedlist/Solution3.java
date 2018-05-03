@@ -24,7 +24,7 @@ class Solution3 {
             }*/
             // 优化上面的代码
             head.next = removeElements(head.next, val);
-            return head.val==val?head.next:head;
+            return head.val == val ? head.next : head;
         }
     }
 
