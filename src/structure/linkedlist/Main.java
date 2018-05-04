@@ -31,15 +31,15 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        /*LinkedList<Integer> linkedList = new LinkedList<>();
-        for (int i = 0; i < 5; i++) {
+        LinkedList<Integer> linkedList = new LinkedList<>();
+        for (int i = 0; i < 3; i++) {
             linkedList.addFirst(i);
             System.out.println(linkedList);
         }
         linkedList.add(2, 666);
         System.out.println(linkedList);
 
-
+        /*
         linkedList.remove(2);
         System.out.println(linkedList);
 
@@ -51,7 +51,7 @@ public class Main {
         System.out.println(linkedList);*/
 
 
-        int opCount = 5000000;
+        /*int opCount = 5000000;
 
         ArrayStack<Integer> arrayStack = new ArrayStack<>();
         double time1 = testStack(arrayStack, opCount);
@@ -59,6 +59,6 @@ public class Main {
 
         LinkedListStack<Integer> linkedListStack = new LinkedListStack<>();
         double time2 = testStack(linkedListStack, opCount);
-        System.out.println("LoopQueue, time:" + time2 + "s");
+        System.out.println("LoopQueue, time:" + time2 + "s");*/
     }
 }
