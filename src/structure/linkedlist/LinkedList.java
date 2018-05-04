@@ -32,11 +32,11 @@ public class LinkedList<E> {
         }
     }
 
-    private Node dummyhead;
+    private Node dummyHead;
     int size;
 
     public LinkedList() {
-        dummyhead = new Node(null, null);
+        dummyHead = new Node(null, null);
         size = 0;
     }
 
@@ -69,7 +69,7 @@ public class LinkedList<E> {
         if (index < 0 || index > size) {
             throw new IllegalArgumentException("Add failed , index is illegal");
         }
-        Node prev = dummyhead;
+        Node prev = dummyHead;
         for (int i = 0; i < index; i++) {
             prev = prev.next;
         }
@@ -113,7 +113,7 @@ public class LinkedList<E> {
         if (index < 0 || index > size) {
             throw new IllegalArgumentException("Get failed , index is illegal");
         }
-        Node cur = dummyhead.next;
+        Node cur = dummyHead.next;
         for (int i = 0; i < index; i++) {
             cur = cur.next;
         }
@@ -143,7 +143,7 @@ public class LinkedList<E> {
             throw new IllegalArgumentException("Set failed , index is illegal");
         }
 
-        Node cur = dummyhead.next;
+        Node cur = dummyHead.next;
         for (int i = 0; i < index; i++) {
             cur = cur.next;
         }
@@ -157,7 +157,7 @@ public class LinkedList<E> {
      * @return
      */
     public boolean contains(E e) {
-        Node cur = dummyhead.next;
+        Node cur = dummyHead.next;
         while (cur.next != null) {
             if (cur.e.equals(e)) {
                 return true;
@@ -178,7 +178,7 @@ public class LinkedList<E> {
         if (index < 0 || index > size) {
             throw new IllegalArgumentException("Set failed , index is illegal");
         }
-        Node prev = dummyhead;
+        Node prev = dummyHead;
         for (int i = 0; i < index; i++) {
             prev = prev.next;
         }
@@ -208,7 +208,7 @@ public class LinkedList<E> {
     @Override
     public String toString() {
         StringBuilder res = new StringBuilder();
-        Node cur = dummyhead.next;
+        Node cur = dummyHead.next;
         while (cur != null) {
             res.append(cur + "->");
             cur = cur.next;
