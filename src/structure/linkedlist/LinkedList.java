@@ -33,7 +33,7 @@ public class LinkedList<E> {
     }
 
     private Node dummyHead;
-    int size;
+    private int size;
 
     public LinkedList() {
         dummyHead = new Node(null, null);
@@ -71,6 +71,7 @@ public class LinkedList<E> {
         }
         Node prev = dummyHead;
         for (int i = 0; i < index; i++) {
+            // 从头节点开始，循环到插入节点 index 的前面一个节点
             prev = prev.next;
         }
 
@@ -176,7 +177,7 @@ public class LinkedList<E> {
      */
     public E remove(int index) {
         if (index < 0 || index > size) {
-            throw new IllegalArgumentException("Set failed , index is illegal");
+            throw new IllegalArgumentException("Remove failed , index is illegal");
         }
         Node prev = dummyHead;
         for (int i = 0; i < index; i++) {
