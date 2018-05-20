@@ -2,3 +2,32 @@
 *.iml
 .DS_Store
 *.class
+
+######################
+# OS generated files #
+######################
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+#####################
+# Java Ignore files #
+#####################
+
+#####################
+# C++ Ignore files #
+#####################
+*.gch
+*.out
+
+##########################
+# Jetbrains Ignore files #
+##########################
+.idea/
+
+#################
+# Keynote       #
+#################
+*.key
