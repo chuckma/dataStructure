@@ -65,10 +65,31 @@ public class MaxHeap<E extends Comparable<E>> {
 
     /**
      * 完全二叉树的数组表示中，一个索引所表示的元素的右孩子节点的索引
+     *
      * @param index
      * @return
      */
     private int rightChild(int index) {
         return index * 2 + 2;
+    }
+
+
+    /**
+     * 向堆中添加元素
+     *
+     * @param e
+     */
+    public void add(E e) {
+        data.addLast(e);
+        // 上浮元素的索引，是新加入的元素的索引，也是数组最后的元素的索引
+        siftUp(data.getSize() - 1);
+    }
+
+    private void siftUp(int k) {
+        // 如果自己父节点值比自己还小， 则需要将自己进行上浮，就是位置的交换
+        while (k > 0 && data.get(parent(k)).compareTo(data.get(k)) < 0) {
+            data.swap(k,parent(k));
+            k = parent(k);
+        }
     }
 }

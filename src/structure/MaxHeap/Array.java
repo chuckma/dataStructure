@@ -108,6 +108,7 @@ public class Array<E> {
 
     /**
      * 获取最后一个元素
+     *
      * @return
      */
     public E getLast() {
@@ -116,6 +117,7 @@ public class Array<E> {
 
     /**
      * 获取第一个元素
+     *
      * @return
      */
     public E getFirst() {
@@ -248,6 +250,22 @@ public class Array<E> {
         }
     }
 
+
+    /**
+     * 交换位置 i，j 数组的位置
+     *
+     * @param i
+     * @param j
+     */
+    public void swap(int i, int j) {
+        if (i < 0 || i >= size || j < 0 || j >= size) {
+            throw new IllegalArgumentException("index is illegal");
+        } else {
+            E t = data[i];
+            data[i] = data[j];
+            data[j] = t;
+        }
+    }
 
     @Override
     public String toString() {
