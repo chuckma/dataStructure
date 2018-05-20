@@ -88,8 +88,56 @@ public class MaxHeap<E extends Comparable<E>> {
     private void siftUp(int k) {
         // 如果自己父节点值比自己还小， 则需要将自己进行上浮，就是位置的交换
         while (k > 0 && data.get(parent(k)).compareTo(data.get(k)) < 0) {
-            data.swap(k,parent(k));
+            data.swap(k, parent(k));
             k = parent(k);
+        }
+    }
+
+
+    /**
+     * 找出最大的元素
+     *
+     * @return
+     */
+    public E findMax() {
+        if (data.getSize() == 0) {
+            throw new IllegalArgumentException("Cannot findMax when heap is empty!");
+        } else {
+            return data.get(0);
+        }
+    }
+
+    /**
+     * 取出最大的元素
+     *
+     * @return
+     */
+    public E extractMax() {
+
+        E ret = findMax();
+        // 位置交换
+        data.swap(0, data.getSize() - 1);
+        data.removeLast();
+        // 元素下沉操作
+        siftDown(0);
+        return ret;
+    }
+
+    private void siftDown(int k) {
+        // k 节点一个子节点都没有
+        while (leftChild(k) < data.getSize()) {
+            int j = leftChild(k);
+            if (j + 1 < data.getSize() && data.get(j + 1).compareTo(data.get(j)) > 0) {
+                j = rightChild(k);
+                // 此时 data[j] 是leftChild 和 rightChild中最大的值
+            }
+            if (data.get(k).compareTo(data.get(j)) >= 0) {
+                // 如果已经比左右子节点都大了，就不需要下沉了。
+                break;
+            } else {
+                data.swap(k, j);
+                k = j;
+            }
         }
     }
 }
