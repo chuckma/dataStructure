@@ -19,6 +19,18 @@ public class MaxHeap<E extends Comparable<E>> {
     }
 
     /**
+     * 将任意数组 组合成堆的形状。原理是将数组视为完全二叉树，
+     * 从最后一个非叶子节点开始，从后向前，倒着对每个元素进行 "下沉" 操作
+     * @param arr
+     */
+    public MaxHeap(E[] arr) {
+        data = new Array<>(arr);
+        for (int i = parent(arr.length - 1); i >= 0; i--) {
+            siftDown(i);
+        }
+    }
+
+    /**
      * 返回堆中的元素个数
      *
      * @return
@@ -140,4 +152,19 @@ public class MaxHeap<E extends Comparable<E>> {
             }
         }
     }
+
+    /**
+     * 取出堆中最大的元素，并且替换成元素 e
+     *
+     * @param e
+     * @return
+     */
+    public E replace(E e) {
+        E ret = findMax();
+        data.set(0, e);
+        siftDown(0);
+        return ret;
+    }
+
+
 }
