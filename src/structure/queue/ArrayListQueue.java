@@ -5,6 +5,8 @@ import java.util.ArrayList;
 /**
  * @author Administrator
  * @date 2018/6/7  15:27
+ *
+ * ArrayList 实现 queue
  */
 public class ArrayListQueue<E> implements Queue<E> {
 

@@ -5,6 +5,7 @@ import java.util.ArrayList;
 /**
  * @author Administrator
  * @date 2018/6/7  14:26
+ * ArrayList 实现 Stack
  */
 public class ArrayListStack<E> implements Stack<E> {
 
