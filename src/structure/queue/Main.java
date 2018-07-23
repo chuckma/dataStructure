@@ -27,7 +27,7 @@ public class Main {
     public static void main(String[] args) {
         int opCount = 100000;
 
-        ArrayQueue<Integer> arrayQueue = new ArrayQueue<>();
+        /*ArrayQueue<Integer> arrayQueue = new ArrayQueue<>();
         double time1 = testQueue(arrayQueue, opCount);
         System.out.println("ArrayQueue, time:" + time1 + "s");
 
@@ -38,8 +38,16 @@ public class Main {
 
         LinkedListQueue<Integer> linkedListQueue = new LinkedListQueue<>();
         double time3 = testQueue(linkedListQueue, opCount);
-        System.out.println("linkedListQueue, time:" + time3 + "s");
+        System.out.println("linkedListQueue, time:" + time3 + "s");*/
 
-
+        ArrayListQueue<Integer> queue = new ArrayListQueue<>();
+        for (int i = 0; i < 5; i++) {
+            queue.enqueue(i);
+            System.out.println(queue);
+        }
+        queue.dequeue();
+        System.out.println(queue);
+        System.out.println(queue.getFront());
+        System.out.println(queue.getSize());
     }
 }
