@@ -6,7 +6,7 @@ import java.util.ArrayList;
  * @Author Lucas Ma
  *
  *
- * 红黑树
+ * 红黑树实现
  */
 public class RBTree<K extends Comparable<K>, V> {
 
