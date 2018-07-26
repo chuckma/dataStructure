@@ -1,5 +1,8 @@
 package structure.hash;
 
+import java.util.HashMap;
+import java.util.HashSet;
+
 /**
  * @Author Lucas Ma
  */
@@ -20,7 +23,20 @@ public class Main {
 
         System.out.println(str.hashCode());
 
+        System.out.println(Integer.MAX_VALUE + 1);
+        System.out.println();
 
+        Student student = new Student(3, 2, "Bobo", "Liu");
+        System.out.println(student.hashCode());
+
+        HashSet<Student> set = new HashSet<>();
+        set.add(student);
+
+        HashMap<Student, Integer> scores = new HashMap<>();
+        scores.put(student, 100);
+
+        Student student2 = new Student(3, 2, "Bobo", "Liu");
+        System.out.println(student2.hashCode());
 
     }
 }
