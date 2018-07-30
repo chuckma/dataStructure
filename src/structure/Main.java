@@ -30,8 +30,8 @@ public class Main {
         Integer[] arr1 = SortTestHelper.generateRandomArray(N, 0, N);
 //        Integer[] arr2 = Arrays.copyOf(arr1, arr1.length);
 //        Integer[] arr3 = Arrays.copyOf(arr1, arr1.length);
-//        Integer[] arr4 = Arrays.copyOf(arr1, arr1.length);
-//        Integer[] arr5 = Arrays.copyOf(arr1, arr1.length);
+        Integer[] arr4 = Arrays.copyOf(arr1, arr1.length);
+        Integer[] arr5 = Arrays.copyOf(arr1, arr1.length);
 //        Integer[] arr6 = Arrays.copyOf(arr1, arr1.length);
 //        Integer[] arr7 = Arrays.copyOf(arr1, arr1.length);
 
